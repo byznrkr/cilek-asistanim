@@ -109,6 +109,9 @@ function mapEmojiToName(emoji) {
     "🌞": "Isik",
     "🧤": "Hasat",
     "❄️": "Koruma",
+    "🌸": "Cicek",
+    "🍓": "Meyve",
+    "🐝": "Tozlasma"    
   };
   return map[emoji] || "Gorev";
 }
