@@ -354,13 +354,43 @@ onboardingForm.addEventListener("submit", async (event) => {
 
   } catch (error) {
     console.warn("Sunucuya ulasilamadi, yedek takvim yukleniyor...");
-    appState.calendarDays = [
-      { day: 1, emoji: "🌱", taskName: "Dikim", task: "Saksıya fideni dik", detail: "Bugün dikim günü! Can suyunu vermeyi unutma." },
-      { day: 2, emoji: "💧", taskName: "Su", task: "Nem kontrolü", detail: "Toprağı parmağınla kontrol et, nemliyse sulama yapma." },
-      { day: 3, emoji: "☀️", taskName: "Işık", task: "Güneş ayarı", detail: "Fideni aydınlık bir yere al ama direkt yakıcı güneşten koru." },
-      { day: 4, emoji: "💧", taskName: "Su", task: "Az miktar su", detail: "Saksı dibinde su birikmesin, azar azar sula." },
-      { day: 5, emoji: "🧪", taskName: "Besin", task: "İlk vitamin", detail: "Çilek fiden için sıvı besin takviyesi yapabilirsin." }
-    ];
+   appState.calendarDays = [
+  // 🌱 FİDE DÖNEMİ (1–10)
+  { day: 1, emoji: "🌱", taskName: "Dikim", task: "Fideyi saksıya dik", detail: "Dikim sonrası can suyu ver." },
+  { day: 2, emoji: "💧", taskName: "Su", task: "Toprak nemini kontrol et", detail: "Nemliyse sulama yapma." },
+  { day: 3, emoji: "☀️", taskName: "Işık", task: "Aydınlık yere koy", detail: "Direkt yakıcı güneşten koru." },
+  { day: 4, emoji: "💧", taskName: "Su", task: "Az miktarda sulama", detail: "Saksı altı su dolmasın." },
+  { day: 5, emoji: "🧪", taskName: "Besin", task: "Hafif besin ver", detail: "Fideyi desteklemek için sıvı gübre kullan." },
+  { day: 6, emoji: "💧", taskName: "Su", task: "Nem kontrolü", detail: "Toprak kuruduysa sulama yap." },
+  { day: 7, emoji: "🌞", taskName: "Işık", task: "Güneş süresini artır", detail: "Yavaş yavaş güneşe alıştır." },
+  { day: 8, emoji: "💧", taskName: "Su", task: "Dengeli sulama", detail: "Aşırıya kaçma." },
+  { day: 9, emoji: "🧪", taskName: "Besin", task: "İkinci besin", detail: "Kök gelişimi için destek ver." },
+  { day: 10, emoji: "🔍", taskName: "Kontrol", task: "Yaprakları incele", detail: "Hastalık belirtisi var mı bak." },
+
+  // 🌸 ÇİÇEKLENME (11–20)
+  { day: 11, emoji: "🌸", taskName: "Çiçek", task: "Çiçeklenme başladı", detail: "Bitkiyi stresten koru." },
+  { day: 12, emoji: "💧", taskName: "Su", task: "Düzenli sulama", detail: "Toprak sürekli hafif nemli olsun." },
+  { day: 13, emoji: "🐝", taskName: "Tozlaşma", task: "Hafif sallama", detail: "Tozlaşmayı destekle." },
+  { day: 14, emoji: "🧪", taskName: "Besin", task: "Çiçek gübresi", detail: "Potasyum ağırlıklı gübre kullan." },
+  { day: 15, emoji: "💧", taskName: "Su", task: "Kontrollü sulama", detail: "Çiçeklere su değdirmemeye çalış." },
+  { day: 16, emoji: "☀️", taskName: "Işık", task: "Güneş kontrolü", detail: "Günde 6 saat ışık ideal." },
+  { day: 17, emoji: "🔍", taskName: "Kontrol", task: "Zararlı kontrolü", detail: "Yaprak altlarını incele." },
+  { day: 18, emoji: "💧", taskName: "Su", task: "Toprak kontrolü", detail: "Kurudukça sulama yap." },
+  { day: 19, emoji: "🧪", taskName: "Besin", task: "Takviye gübre", detail: "Meyve oluşumunu destekler." },
+  { day: 20, emoji: "🌸", taskName: "Çiçek", task: "Yeni çiçekler", detail: "Sağlıklı gelişimi gözlemle." },
+
+  // 🍓 MEYVE DÖNEMİ (21–30)
+  { day: 21, emoji: "🍓", taskName: "Meyve", task: "Meyve oluşumu", detail: "Sulamayı düzenli yap." },
+  { day: 22, emoji: "💧", taskName: "Su", task: "Dengeli sulama", detail: "Aşırı sulama çürütür." },
+  { day: 23, emoji: "☀️", taskName: "Işık", task: "Güneş desteği", detail: "Tat için güneş önemli." },
+  { day: 24, emoji: "🧪", taskName: "Besin", task: "Meyve besini", detail: "Şeker oranını artırır." },
+  { day: 25, emoji: "💧", taskName: "Su", task: "Nem kontrolü", detail: "Toprak hafif nemli kalmalı." },
+  { day: 26, emoji: "🔍", taskName: "Kontrol", task: "Meyveleri incele", detail: "Çürük var mı bak." },
+  { day: 27, emoji: "🍓", taskName: "Olgunlaşma", task: "Renk kontrolü", detail: "Kırmızılaşanları takip et." },
+  { day: 28, emoji: "💧", taskName: "Su", task: "Az sulama", detail: "Hasada yakın suyu azalt." },
+  { day: 29, emoji: "🧤", taskName: "Hasat", task: "İlk hasat", detail: "Olgun meyveleri topla." },
+  { day: 30, emoji: "🧤", taskName: "Hasat", task: "Devam eden hasat", detail: "Yeni meyveleri toplamaya devam et." }
+];
     weatherPill.textContent = "Çevrimdışı Mod: Örnek Takvim";
     appState.currentTempC = null;
     renderSecret("İnternet bağlantısı kısıtlı, yerel rehber aktif.");
