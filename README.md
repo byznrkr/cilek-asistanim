@@ -2,6 +2,10 @@
 
 Akilli Cilek Asistani; sehir ve yetistirme tipine gore 1 aylik emoji tabanli gorev takvimi olusturan, fotograf analizi ile hastalik/zararli icin acil aksiyon onerileri sunan bir web uygulamasidir.
 
+🚀 Canlı Yayın Linki: https://cilek-asistanim.netlify.app/
+
+📹 Demo Video:
+
 ## Ozellikler
 
 - Onboarding: `Sehir/Ilce` + `Saksi` / `Tarla` secimi
