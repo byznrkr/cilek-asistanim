@@ -342,6 +342,20 @@ onboardingForm.addEventListener("submit", async (event) => {
   showCalendar();
   setLoading(true, "Takvim ve hava durumu hazirlaniyor...");
 
+  // ACİL DURUM YEDEĞİ: Eğer sunucuya ulaşılamazsa bu takvimi göster
+    const backupDays = [
+      { day: 1, emoji: "🌱", taskName: "Dikim", task: "Saksıya fideni dik", detail: "27 Mart: Bugün dikim günü! Can suyunu ver." },
+      { day: 2, emoji: "💧", taskName: "Su", task: "Nem kontrolü", detail: "Toprağı parmağınla kontrol et, nemliyse sulama." },
+      { day: 3, emoji: "☀️", taskName: "Işık", task: "Güneş ayarı", detail: "Fideni aydınlık bir yere al ama direkt yakıcı güneşten koru." },
+      { day: 4, emoji: "💧", taskName: "Su", task: "Az miktar su", detail: "Saksı dibinde su birikmesin, azar azar sula." },
+      { day: 5, emoji: "🧪", taskName: "Besin", task: "İlk vitamin", detail: "Çilek fiden için sıvı besin takviyesi yapabilirsin." }
+    ];
+  } catch (error) {
+    console.log("Sunucuya ulaşılamadı, yedek takvim yükleniyor...");
+    appState.calendarDays = backupDays; // Hata olursa yedek takvimi kullan!
+    weatherPill.textContent = "Çevrimdışı Mod: Yerel Takvim";
+    setView(appState.view); // Takvimi ekrana çizdir
+
   try {
     const result = await fetchAiCalendar(profile);
     appState.calendarDays = Array.isArray(result.days) ? result.days : [];
