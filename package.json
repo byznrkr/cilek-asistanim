@@ -1,0 +1,9 @@
+{
+  "name": "cilek-asistanim",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Akilli Cilek Asistani",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akilli Cilek Asistani</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <span class="header-spacer" aria-hidden="true"></span>
+      <p class="header-location" id="headerLocation">📍 Sehir Secilmedi | 🌿 Tip Secilmedi</p>
+      <button type="button" class="header-button" id="settingsButton" aria-label="Ayarlar">⚙️ Ayarlar</button>
+    </header>
+
+    <main class="app-main">
+      <div class="loading-overlay hidden" id="loadingOverlay" aria-live="polite">
+        <div class="loading-card"><span class="loading-spinner" aria-hidden="true"></span><p id="loadingText">Yukleniyor...</p></div>
+      </div>
+
+      <section class="card onboarding-card" id="onboardingSection">
+        <h1>Hoş Geldin Çilek Asistanına</h1>
+        <p class="card-subtitle">Takvim uretilmesi icin once konum ve yetistirme tipi gir.</p>
+        <form id="onboardingForm" class="onboarding-form">
+          <label class="field-label" for="cityInput">Konum (Sehir / Ilce)</label>
+          <input id="cityInput" name="city" type="text" placeholder="Orn: Nigde" required />
+          <fieldset class="grow-type-group">
+            <legend>Yetistirme Tipi</legend>
+            <label class="radio-item" for="growTypePots"><input id="growTypePots" type="radio" name="growType" value="Saksi" required /> 🌱 Saksi</label>
+            <label class="radio-item" for="growTypeField"><input id="growTypeField" type="radio" name="growType" value="Tarla" /> 🚜 Tarla</label>
+          </fieldset>
+          <div id="potSizeGroup" class="size-group hidden">
+            <label class="field-label" for="potDiameterInput">Saksi Capi (cm, istege bagli)</label>
+            <input id="potDiameterInput" name="potDiameterCm" type="number" min="5" max="120" placeholder="Orn: 20" />
+          </div>
+          <div id="fieldSizeGroup" class="size-group hidden">
+            <label class="field-label" for="fieldAreaInput">Tarla Buyuklugu (hektar, istege bagli)</label>
+            <input id="fieldAreaInput" name="fieldAreaHa" type="number" min="1" step="0.1" placeholder="Orn: 2.5" />
+          </div>
+          <fieldset class="grow-type-group">
+            <legend>Kullanim Seviyesi</legend>
+            <label class="radio-item" for="levelHobby"><input id="levelHobby" type="radio" name="userLevel" value="Hobi" required /> Hobi</label>
+            <label class="radio-item" for="levelPro"><input id="levelPro" type="radio" name="userLevel" value="Profesyonel" /> Profesyonel</label>
+          </fieldset>
+          <button type="submit" class="primary-button">Takvimi Olustur</button>
+        </form>
+      </section>
+
+      <section class="card calendar-card hidden" id="calendarSection">
+        <div class="calendar-topbar">
+          <div class="view-switch" id="viewSwitch">
+            <button type="button" class="switch-btn active" data-view="month">📅 Ay</button>
+            <button type="button" class="switch-btn" data-view="week">🗓️ Hafta</button>
+          </div>
+          <span class="weather-pill" id="weatherPill">Hava durumu yukleniyor...</span>
+        </div>
+        <h2>Cilek Takvimi</h2>
+        <p id="calendarIntro">Her gunde tek gorev/emoji gosterilir. Gune dokununca detay acilir.</p>
+        <div class="calendar-grid" id="calendarGrid" aria-live="polite"></div>
+        <div class="day-detail hidden" id="dayDetail"></div>
+      </section>
+
+      <aside class="settings-panel hidden" id="settingsPanel">
+        <div class="settings-head">
+          <h3>Ayarlar</h3>
+          <button type="button" id="settingsCloseButton" aria-label="Ayarlari kapat">✕</button>
+        </div>
+        <section class="settings-block">
+          <h4>Gorunum</h4>
+          <div class="theme-options">
+            <button type="button" class="theme-btn" data-theme="light">☀️ Aydinlik</button>
+            <button type="button" class="theme-btn" data-theme="dark">🌙 Karanlik</button>
+            <button type="button" class="theme-btn" data-theme="system">🖥 Sistem</button>
+          </div>
+        </section>
+        <section class="settings-block">
+          <h4>Emoji Rehberi</h4>
+          <p>💧 Su: Sulama</p>
+          <p>🌱 Ekim: Dikim gunu</p>
+          <p>🧪 Besin: Gubreleme</p>
+          <p>⛏️ Capa: Havalandirma</p>
+          <p>✂️ Budama: Temizlik</p>
+          <p>🌞 Isik: Gunes kontrolu</p>
+          <p>🧤 Hasat: Toplama zamani</p>
+          <p>❄️ Koruma: Don onlemi</p>
+        </section>
+        <section class="settings-block">
+          <h4>Yardim</h4>
+          <a href="mailto:destek@cilekasistani.com">Bize Yazin</a>
+          <a href="mailto:destek@cilekasistani.com?subject=Hata%20Bildir">Hata Bildir</a>
+        </section>
+        <button type="button" class="primary-button reset-btn" id="resetInsideSettings">Bilgileri Sifirla</button>
+      </aside>
+    </main>
+
+    <section class="daily-secret" id="dailySecretCard">
+      <h3>🍓 Bugunun Cilek Sirri</h3>
+      <p id="dailySecretText">Bitkiyi sabah erken saatte kontrol etmek yaprak problemlerini erken yakalamani saglar.</p>
+    </section>
+
+    <button class="chat-fab" id="chatFab" aria-label="Cilek Ustasi Sohbet">💬</button>
+    <section class="chat-panel hidden" id="chatPanel">
+      <header class="chat-header">
+        <div><strong>🧑‍🌾 Cilek Ustasi</strong><p>Cevrimici</p></div>
+        <button type="button" id="chatCloseBtn">✖</button>
+      </header>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-message bot">Merhaba! Cilek bakimi ile ilgili sorunu yazabilirsin.</div>
+      </div>
+      <form class="chat-input-row" id="chatForm">
+        <label class="chat-photo-btn" for="chatPhotoInput">📷</label>
+        <input id="chatPhotoInput" type="file" accept="image/*" capture="environment" />
+        <input id="chatInput" type="text" placeholder="Uzmana sor..." />
+        <button type="submit">Gonder</button>
+      </form>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
