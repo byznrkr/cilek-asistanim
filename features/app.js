@@ -370,24 +370,6 @@ onboardingForm.addEventListener("submit", async (event) => {
   }
 });
   
-  try {
-    const result = await fetchAiCalendar(profile);
-    appState.calendarDays = Array.isArray(result.days) ? result.days : [];
-    appState.currentTempC =
-      typeof result.currentTempC === "number"
-        ? result.currentTempC
-        : parseTempFromWeatherString(result.weatherSummary);
-    weatherPill.textContent = result.weatherSummary || "Hava verisi bulunamadi";
-    renderSecret(result.dailyTip);
-    setView(appState.view);
-  } catch (error) {
-    weatherPill.textContent = "Hava verisi alinamadi";
-    appState.currentTempC = null;
-    renderSecret("Bugun yaprak altlarini kontrol et.");
-  } finally {
-    setLoading(false);
-  }
-});
 
 onboardingForm.addEventListener("change", () => {
   const growType = new FormData(onboardingForm).get("growType");
