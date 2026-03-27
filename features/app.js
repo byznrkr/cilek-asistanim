@@ -337,11 +337,13 @@ onboardingForm.addEventListener("submit", async (event) => {
     potDiameterCm,
     fieldAreaHa,
   };
+
   saveProfile(profile);
   renderProfile(profile);
   showCalendar();
-  setLoading(true, "Takvim ve hava durumu hazirlaniyor...");
-try {
+  setLoading(true, "Takvim hazirlaniyor...");
+
+  try {
     const result = await fetchAiCalendar(profile);
     appState.calendarDays = Array.isArray(result.days) ? result.days : [];
     appState.currentTempC = typeof result.currentTempC === "number" 
@@ -352,8 +354,6 @@ try {
 
   } catch (error) {
     console.warn("Sunucuya ulasilamadi, yedek takvim yukleniyor...");
-    
-    // YEDEK TAKVİM (İnternet olmadığında görünecek olan)
     appState.calendarDays = [
       { day: 1, emoji: "🌱", taskName: "Dikim", task: "Saksıya fideni dik", detail: "Bugün dikim günü! Can suyunu vermeyi unutma." },
       { day: 2, emoji: "💧", taskName: "Su", task: "Nem kontrolü", detail: "Toprağı parmağınla kontrol et, nemliyse sulama yapma." },
@@ -361,13 +361,10 @@ try {
       { day: 4, emoji: "💧", taskName: "Su", task: "Az miktar su", detail: "Saksı dibinde su birikmesin, azar azar sula." },
       { day: 5, emoji: "🧪", taskName: "Besin", task: "İlk vitamin", detail: "Çilek fiden için sıvı besin takviyesi yapabilirsin." }
     ];
-
     weatherPill.textContent = "Çevrimdışı Mod: Örnek Takvim";
     appState.currentTempC = null;
     renderSecret("İnternet bağlantısı kısıtlı, yerel rehber aktif.");
-
   } finally {
-    // Ne olursa olsun takvimi çizdiriyoruz
     setView(appState.view);
     setLoading(false);
   }
