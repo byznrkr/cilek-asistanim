@@ -1,0 +1,1 @@
+Bu projede AI Agent olarak n8n ve Gemini 2.5 Flash modeli kullanılmıştır. Kullanıcıdan alınan veriler n8n webhook'u ile işlenip, Gemini tarafından analiz edildikten sonra Gmail üzerinden otomatik rapor olarak gönderilmektedir.
