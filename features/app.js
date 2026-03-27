@@ -117,7 +117,7 @@ function mapEmojiToName(emoji) {
 }
 
 function renderProfile(profile) {
-  const icon = profile.growType === "Saksi" ? "🌿" : "🚜";
+  const icon = profile.growType === "Saksi" ? "🌱" : "🚜";
   headerLocation.textContent = `📍 ${profile.city} | ${icon} ${profile.growType} | ${profile.userLevel}`;
   calendarIntro.textContent =
     profile.growType === "Saksi"
@@ -128,7 +128,19 @@ function renderProfile(profile) {
 function renderSecret(tip) {
   dailySecretText.textContent = tip || "Bugun cilek koklerini asiri sulamadan koru.";
 }
+function renderSecret(tip) {
+  const fallbackTips = [
+    "Toprağı sürekli ıslak değil, nemli tutmak çileğin en sağlıklı büyümesini sağlar.",
+    "Sabah saatlerinde sulama yapmak kök çürümesini önler.",
+    "Çilekler güneşi sever ama aşırı sıcakta yaprakları kontrol et.",
+    "Meyve döneminde fazla su, çileğin tadını azaltabilir.",
+    "Yaprak altlarını kontrol etmek zararlıları erken yakalamanı sağlar."
+  ];
 
+  const randomTip = fallbackTips[Math.floor(Math.random() * fallbackTips.length)];
+
+  dailySecretText.textContent = tip || randomTip;
+}
 function showCalendar() {
   onboardingSection.classList.add("hidden");
   calendarSection.classList.remove("hidden");
