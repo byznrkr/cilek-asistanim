@@ -46,3 +46,6 @@ Akilli Cilek Asistani; sehir ve yetistirme tipine gore 1 aylik emoji tabanli gor
 
 - `.env` dosyasi gizli tutulmalidir, repoya eklenmemelidir.
 - API anahtari yoksa veya servis gecici erisilemezse uygulama fallback icerik gosterir.
+
+##🌟 Yeni Özellik: Çilek Acil Durum Hattı (AI Otomasyonu)
+- Projeye n8n kullanılarak sıfır-kod (no-code) bir yapay zeka otomasyonu entegre edildi. Kullanıcılar form üzerinden bitkilerindeki sorunu iletiyor, sistem arka planda en güncel Gemini modeliyle bunu analiz edip saniyeler içinde kullanıcıya özel 3 maddelik acil çözüm reçetesini otomatik e-posta olarak gönderiyor!  
