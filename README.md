@@ -1,6 +1,6 @@
 # Akıllı Çilek Asistanı
 
-- Akilli Cilek Asistani; sehir ve yetistirme tipine gore 1 aylik emoji tabanli gorev takvimi olusturan, fotograf analizi ve AI ile hastalik/zararli icin acil aksiyon onerileri sunan bir web uygulamasidir.
+Akilli Cilek Asistani; sehir ve yetistirme tipine gore 1 aylik emoji tabanli gorev takvimi olusturan, fotograf analizi ve AI ile hastalik/zararli icin acil aksiyon onerileri sunan bir web uygulamasidir.
 
 ## Problem
 Çilek yetiştirmek keyifli bir uğraş olsa da, bitki hastalıklarına anında ve doğru tanıyı koymak, aynı zamanda konuma ve yetiştirme tipine uygun günlük bakımı planlamak hobi yetiştiricileri için oldukça zordur. Yanlış müdahaleler veya düzensiz bakım döngüleri maalesef bitki kayıplarına yol açmaktadır.
