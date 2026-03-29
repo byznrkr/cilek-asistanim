@@ -11,10 +11,11 @@ Akıllı Çilek Asistanı, kullanıcının bulunduğu şehir ve yetiştirme tipi
 Projenin kalbinde güçlü bir Yapay Zeka entegrasyonu yatar. Sohbet paneli içerisine entegre edilen "Acil Çilek Doktoru" (n8n otomasyonu) sayesinde, kullanıcılar bitkilerindeki sorunu forma yazıp gönderdiklerinde, sistem arka planda Gemini yapay zeka modelini çalıştırır. Saniyeler içinde analiz edilen sorun, kullanıcının e-posta adresine detaylı bir teşhis ve 3 maddelik acil çözüm reçetesi olarak otomatik iletilir.
 
 ## Canlı Demo
+
 - **Yayın Linki:**
 - https://cilek-asistanim.vercel.app/
 - [https://cilek-asistanim.netlify.app/](https://cilek-asistanim.netlify.app/) (Project has been paused)
-- 
+  
 - **Demo Video:** [https://www.loom.com/share/a4caad54b65149a59b065a28b203bdbe](https://www.loom.com/share/a4caad54b65149a59b065a28b203bdbe)
   
 ## Kullanılan Teknolojiler
