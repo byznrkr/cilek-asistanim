@@ -4,7 +4,7 @@ Akilli Cilek Asistani; sehir ve yetistirme tipine gore 1 aylik emoji tabanli gor
 
 🚀 Canlı Yayın Linki: https://cilek-asistanim.netlify.app/
 
-📹 Demo Video:
+📹 Demo Video: https://www.loom.com/share/a4caad54b65149a59b065a28b203bdbe
 
 ## Ozellikler
 
