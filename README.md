@@ -12,11 +12,12 @@ Projenin kalbinde güçlü bir Yapay Zeka entegrasyonu yatar. Sohbet paneli içe
 
 ## Canlı Demo
 
-- **Yayın Linki:**
+ **Yayın Linki:**
 - https://cilek-asistanim.vercel.app/
 - [https://cilek-asistanim.netlify.app/](https://cilek-asistanim.netlify.app/) (Project has been paused)
   
-- **Demo Video:** [https://www.loom.com/share/a4caad54b65149a59b065a28b203bdbe](https://www.loom.com/share/a4caad54b65149a59b065a28b203bdbe)
+ **Demo Video:** 
+ [https://www.loom.com/share/a4caad54b65149a59b065a28b203bdbe](https://www.loom.com/share/a4caad54b65149a59b065a28b203bdbe)
   
 ## Kullanılan Teknolojiler
 - HTML, CSS, JavaScript (Kullanıcı Arayüzü)
