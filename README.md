@@ -22,13 +22,6 @@ Projenin kalbinde güçlü bir Yapay Zeka entegrasyonu yatar. Sohbet paneli içe
 - Node.js (Yerel Sunucu Ortamı)
 - Cursor, Google AI Studio, ChatGPT (Geliştirme ve Kodlama Destek Araçları)
 - Loom (Demo Video)
-## Ozellikler
-
-- Onboarding: `Sehir/Ilce` + `Saksi` / `Tarla` secimi
-- Sabit pembe gradient header + dinamik alt tema (Aydinlik/Karanlik)
-- Gemini destekli 30 gunluk emoji gorev takvimi + gunun puf noktasi
-- Foto yukleme ile Gemini Vision analiz (olasi teshis + acil cozum adimlari)
-- Mobil uyumlu arayuz ve API cagrilarinda yukleniyor animasyonu
 
 ## Nasıl Çalıştırılır?
 Projeyi kendi bilgisayarınızda yerel olarak çalıştırmak için şu adımları izleyebilirsiniz:
@@ -57,6 +50,15 @@ Projeyi kendi bilgisayarınızda yerel olarak çalıştırmak için şu adımlar
 4. Yine `⚙️ Ayarlar` içerisinden emoji rehberini görebilir ve bize yazından mail atılabilir.
 5. `🍓Sohbet balonu ` `Acil Çilek Doktoru` ile hastalik analizi al.
 6. `BİLGİLERİ SİFİRLA` ile uygulamayi sifirla ve onboarding ekranina don.
+
+## Ozellikler
+
+- Onboarding: `Sehir/Ilce` + `Saksi` / `Tarla` secimi
+- Sabit pembe gradient header + dinamik alt tema (Aydinlik/Karanlik)
+- Gemini destekli 30 gunluk emoji gorev takvimi + gunun puf noktasi
+- Foto yukleme ile Gemini Vision analiz (olasi teshis + acil cozum adimlari)
+- Mobil uyumlu arayuz ve API cagrilarinda yukleniyor animasyonu
+
 
 ## Proje Dosyalari
 
